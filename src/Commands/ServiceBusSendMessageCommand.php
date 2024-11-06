@@ -14,7 +14,7 @@ class ServiceBusSendMessageCommand extends Command
 
 	public function handle(): int
 	{
-		$path = 'ip_request';
+		$path = $this->input->getArgument('path');
 		$payload = ['address' => '127.0.0.1'];
 
 		// Send a message to the queue/topic

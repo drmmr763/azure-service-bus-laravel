@@ -47,8 +47,8 @@ class FetchToken extends SoloRequest implements Cacheable, HasBody
 	protected function defaultBody(): array
 	{
 		return [
-			'client_id' => config('services.azure.client_id'),
-			'client_secret' => config('services.azure.client_secret'),
+			'client_id' => config('azure-service-bus.azure.client_id'),
+			'client_secret' => config('azure-service-bus.azure.client_secret'),
 			'grant_type' => 'client_credentials',
 			'scope' => 'https://servicebus.azure.net/.default',
 		];
